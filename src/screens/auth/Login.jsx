@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link} from 'react-router-dom';
 import { useState } from 'react';
 import { RiMailLine, RiLockLine, RiEyeLine, RiEyeOffLine } from 'react-icons/ri';
 import { toast } from 'react-toastify'
@@ -22,14 +23,16 @@ const Login = () => {
       });
       return;
     }
+
+    //todo el back
   }
 
   return (
-    <div className='bg-white p-8 rounded-lg w-98 '>
+    <div className='bg-white p-6 rounded-lg w-98 '>
       <div>
         <h1 className='text-3xl uppercase font-bold text-center'>Iniciar sesión</h1>
       </div>
-      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-4 mb-6'>
         <div className='relative'>
           <RiMailLine className='absolute left-2 top-1/3 -translate-y-1/2 text-gray-500' />
           <input
@@ -61,12 +64,19 @@ const Login = () => {
             />
           )}
         </div>
+        <div className='text-right'>
+          <Link to='/olvide-contraseña' className='text-gray-400 hover:text-orange-600 hovertransition-colors'>¿Olvidaste tu contraseña?</Link>
+        </div>
         <div>
-          <button className='mt-6 border-none bg-orange-400 text-white w-full py-2 rounded-lg text-2xl hover:bg-orange-600 transition-colors'>
+          <button className='border-none bg-orange-400 text-white w-full py-2 rounded-lg text-2xl hover:bg-orange-600 transition-colors'>
             Ingresar
           </button>
         </div>
       </form>
+      <div className='text-center'>
+        ¿No tiene una cuenta? {" "}
+        <Link to="/registro" className='text-orange-600 font-medium'> ¡Regístrate aqui! </Link>
+      </div>
     </div>
   );
 }

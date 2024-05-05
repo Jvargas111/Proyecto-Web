@@ -17,7 +17,7 @@ function App() {
           <Route index element={<Login />} />
           <Route path='/registro' element={<Register />} />
           <Route path='/olvide-contraseña' element={<ForgetPassword />} />
-          <Route path='/restablecer-contraseña/:id' element={<ChangePassword />} />
+          <Route path='/restablecer-contraseña/:token' element={<ChangePassword />} />
         </Route>
         <Route path='*' element={<Error404/>}/>
       </Routes>
