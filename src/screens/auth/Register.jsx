@@ -53,6 +53,13 @@ const Register = () => {
   return (
     <div className='bg-white p-6 rounded-lg w-98 '>
       <div>
+        <div className='text-center'>
+          <img src='/public/favicon.ico' alt='Logo' className='w-48' />
+          <h2>
+            <strong className='text-orange-400'>Goal</strong> {' '}
+            Tracker
+          </h2>
+        </div>
         <h1 className='text-3xl uppercase font-bold text-center'>Registrarse</h1>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4 mb-6'>
@@ -135,9 +142,12 @@ const Register = () => {
         </div>
       </form>
       <div className='text-center'>
-          ¿Ya tienes una cuenta? {" "}
-          <Link to="/" className='text-orange-600 font-medium'> ¡Ingresa aqui! </Link>
-        </div>
+        ¿Ya tienes una cuenta?{' '}
+        <Link to='/' className='text-orange-600 font-medium'>
+          {' '}
+          ¡Ingresa aqui!{' '}
+        </Link>
+      </div>
     </div>
   );
 };

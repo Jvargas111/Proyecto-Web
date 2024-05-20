@@ -31,7 +31,14 @@ const ForgetPassword = () => {
   return (
     <div className='bg-white p-6 rounded-lg w-98 '>
       <div>
-        <h1 className='text-2xl uppercase font-bold text-center'>Recuperar contraseña</h1>
+        <div className='text-center'>
+          <img src='/public/favicon.ico' alt='Logo' className='w-48' />
+          <h2>
+            <strong className='text-orange-400'>Goal</strong> {' '}
+            Tracker
+          </h2>
+        </div>
+        <h1 className='text-2xl uppercase font-bold text-center mt-4'>Recuperar contraseña</h1>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4 mb-6'>
         <div className='relative'>
