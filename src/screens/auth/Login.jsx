@@ -30,7 +30,18 @@ const Login = () => {
   return (
     <div className='bg-white p-6 rounded-lg w-98 '>
       <div>
-        <h1 className='text-3xl uppercase font-bold text-center'>Iniciar sesión</h1>
+        <div className='text-center'>
+          <img
+            src='/public/favicon.ico'
+            alt='Logo'
+            className='w-48'
+          />
+          <h2>
+            <strong className='text-orange-400'>Acciones</strong> &{' '}
+            <strong className='text-orange-400'>Gestión S.A.S</strong>
+          </h2>
+        </div>
+        <h1 className='text-3xl uppercase font-bold text-center mt-4'>Iniciar sesión</h1>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4 mb-6'>
         <div className='relative'>
@@ -65,7 +76,9 @@ const Login = () => {
           )}
         </div>
         <div className='text-right'>
-          <Link to='/olvide-contraseña' className='text-gray-400 hover:text-orange-600 hovertransition-colors'>¿Olvidaste tu contraseña?</Link>
+          <Link to='/olvide-contraseña' className='text-gray-400 hover:text-orange-600 hovertransition-colors'>
+            ¿Olvidaste tu contraseña?
+          </Link>
         </div>
         <div>
           <button className='border-none bg-orange-400 text-white w-full py-2 rounded-lg text-2xl hover:bg-orange-600 transition-colors'>
@@ -74,8 +87,11 @@ const Login = () => {
         </div>
       </form>
       <div className='text-center'>
-        ¿No tiene una cuenta? {" "}
-        <Link to="/registro" className='text-orange-600 font-medium'> ¡Regístrate aqui! </Link>
+        ¿No tiene una cuenta?{' '}
+        <Link to='/registro' className='text-orange-600 font-medium'>
+          {' '}
+          ¡Regístrate aqui!{' '}
+        </Link>
       </div>
     </div>
   );

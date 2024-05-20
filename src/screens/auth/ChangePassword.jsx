@@ -58,6 +58,13 @@ const ChangePassword = () => {
   return (
     <div className='bg-white p-6 rounded-lg w-98 '>
       <div>
+        <div className='text-center'>
+          <img src='/public/favicon.ico' alt='Hola' className='w-48' />
+          <h2>
+            <strong className='text-orange-400'>Acciones</strong> &{' '}
+            <strong className='text-orange-400'>Gestión S.A.S</strong>
+          </h2>
+        </div>
         <h1 className='text-3xl uppercase font-bold text-center'>Cambiar contraseña</h1>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4 mb-6'>
