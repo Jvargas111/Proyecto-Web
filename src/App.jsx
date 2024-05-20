@@ -1,13 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 //Componentes
 import AuthComponent from './components/auth/AuthComponent';
 //Vistas
-import Login from './screens/auth/Login'
-import Register from './screens/auth/Register'
-import ForgetPassword from './screens/auth/ForgetPassword';
-import ChangePassword from './screens/auth/ChangePassword';
 import Error404 from './screens/404';
-
+import ChangePassword from './screens/auth/ChangePassword';
+import ForgetPassword from './screens/auth/ForgetPassword';
+import Login from './screens/auth/Login';
+import MainPage from './screens/auth/MainPage';
+import NoticiasPage from './screens/auth/NoticiasPage';
+import Register from './screens/auth/Register';
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
           <Route path='/registro' element={<Register />} />
           <Route path='/olvide-contraseña' element={<ForgetPassword />} />
           <Route path='/restablecer-contraseña/:token' element={<ChangePassword />} />
+          <Route path='/main' element={<MainPage />} />
+          <Route path='/noticias' element={<NoticiasPage />} />
         </Route>
-        <Route path='*' element={<Error404/>}/>
+        <Route path='*' element={<Error404 />} />
       </Routes>
     </Router>
   );
