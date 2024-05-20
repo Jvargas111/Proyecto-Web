@@ -37,8 +37,8 @@ const Login = () => {
             className='w-48'
           />
           <h2>
-            <strong className='text-orange-400'>Acciones</strong> &{' '}
-            <strong className='text-orange-400'>Gestión S.A.S</strong>
+            <strong className='text-orange-400'>Goal</strong> {' '}
+            Tracker
           </h2>
         </div>
         <h1 className='text-3xl uppercase font-bold text-center mt-4'>Iniciar sesión</h1>

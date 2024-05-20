@@ -61,8 +61,8 @@ const ChangePassword = () => {
         <div className='text-center'>
           <img src='/public/favicon.ico' alt='Hola' className='w-48' />
           <h2>
-            <strong className='text-orange-400'>Acciones</strong> &{' '}
-            <strong className='text-orange-400'>Gestión S.A.S</strong>
+            <strong className='text-orange-400'>Goal</strong> {' '}
+            Tracker
           </h2>
         </div>
         <h1 className='text-3xl uppercase font-bold text-center'>Cambiar contraseña</h1>
