@@ -1,34 +1,32 @@
-import React from 'react'
-import { Link} from 'react-router-dom';
-import { useState } from 'react';
-import { RiMailLine, RiLockLine, RiEyeLine, RiEyeOffLine } from 'react-icons/ri';
-import { toast } from 'react-toastify'
+import React, { useState } from 'react';
+import { RiEyeLine, RiEyeOffLine, RiLockLine, RiMailLine } from 'react-icons/ri';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleShowPassword = () => {
-    setShowPassword(!showPassword)
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if([email, password].includes("")) {
-      toast.error('Todos los campos son obligatorios', {
-        theme:'dark'
-      });
-      return;
-    }
+    // if ([email, password].includes('')) {
+    //   toast.error('Todos los campos son obligatorios', {
+    //     theme: 'dark',
+    //   });
+    //   return;
+    // }
 
-    //todo el back
-  }
+    navigate('/main');
+  };
 
   return (
-    <div className='bg-white p-6 rounded-lg w-98 '>
+    <div className='bg-white p-6 rounded-lg w-98'>
       <div>
         <h1 className='text-3xl uppercase font-bold text-center'>Iniciar sesión</h1>
       </div>
@@ -37,17 +35,17 @@ const Login = () => {
           <RiMailLine className='absolute left-2 top-1/3 -translate-y-1/2 text-gray-500' />
           <input
             type='email'
-            className=' border-black-100 outline-none py-2 px-8 rounded-lg text-2xl'
+            className='border-black-100 outline-none py-2 px-8 rounded-lg text-2xl'
             placeholder='Correo electrónico'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className='relative'>
-          <RiLockLine className='absolute left-2 top-1/3 -translate-y-1/2 text-gray-500 ' />
+          <RiLockLine className='absolute left-2 top-1/3 -translate-y-1/2 text-gray-500' />
           <input
             type={showPassword ? 'text' : 'password'}
-            className='  border-black-100 outline-none py-2 px-8 rounded-lg text-2xl'
+            className='border-black-100 outline-none py-2 px-8 rounded-lg text-2xl'
             placeholder='Contraseña'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -55,17 +53,19 @@ const Login = () => {
           {showPassword ? (
             <RiEyeOffLine
               onClick={handleShowPassword}
-              className='absolute right-3 top-1/3 -translate-y-1/2 text-gray-500 hover:cursos-pointer'
+              className='absolute right-3 top-1/3 -translate-y-1/2 text-gray-500 hover:cursor-pointer'
             />
           ) : (
             <RiEyeLine
               onClick={handleShowPassword}
-              className='absolute right-3 top-1/3 -translate-y-1/2 text-gray-500 hover:cursos-pointer'
+              className='absolute right-3 top-1/3 -translate-y-1/2 text-gray-500 hover:cursor-pointer'
             />
           )}
         </div>
         <div className='text-right'>
-          <Link to='/olvide-contraseña' className='text-gray-400 hover:text-orange-600 hovertransition-colors'>¿Olvidaste tu contraseña?</Link>
+          <Link to='/olvide-contraseña' className='text-gray-400 hover:text-orange-600 hovertransition-colors'>
+            ¿Olvidaste tu contraseña?
+          </Link>
         </div>
         <div>
           <button className='border-none bg-orange-400 text-white w-full py-2 rounded-lg text-2xl hover:bg-orange-600 transition-colors'>
@@ -74,11 +74,14 @@ const Login = () => {
         </div>
       </form>
       <div className='text-center'>
-        ¿No tiene una cuenta? {" "}
-        <Link to="/registro" className='text-orange-600 font-medium'> ¡Regístrate aqui! </Link>
+        ¿No tiene una cuenta?{' '}
+        <Link to='/registro' className='text-orange-600 font-medium'>
+          {' '}
+          ¡Regístrate aqui!{' '}
+        </Link>
       </div>
     </div>
   );
-}
+};
 
 export default Login;
