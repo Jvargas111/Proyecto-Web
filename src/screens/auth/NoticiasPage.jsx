@@ -23,7 +23,7 @@ const NoticiasPage = () => {
         </div>
       </main>
       <footer className='new-page-footer'>
-        <Link to='/main' className='back-button'>
+        <Link to='/home' className='back-button'>
           Volver a la Página Principal
         </Link>
       </footer>

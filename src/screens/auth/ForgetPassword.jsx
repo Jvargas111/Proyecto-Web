@@ -34,8 +34,8 @@ const ForgetPassword = () => {
         <div className='text-center'>
           <img src='/public/favicon.ico' alt='Logo' className='w-48' />
           <h2>
-            <strong className='text-orange-400'>Goal</strong> {' '}
-            Tracker
+            <strong className='text-orange-400'>GOAL</strong> {' '}
+            TRACKER
           </h2>
         </div>
         <h1 className='text-2xl uppercase font-bold text-center mt-4'>Recuperar contraseña</h1>

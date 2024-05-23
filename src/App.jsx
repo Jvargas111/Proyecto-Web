@@ -6,7 +6,7 @@ import Error404 from './screens/404';
 import ChangePassword from './screens/auth/ChangePassword';
 import ForgetPassword from './screens/auth/ForgetPassword';
 import Login from './screens/auth/Login';
-import MainPage from './screens/auth/MainPage';
+import HomePage from './screens/home/HomePage'
 import NoticiasPage from './screens/auth/NoticiasPage';
 import Register from './screens/auth/Register';
 
@@ -19,7 +19,7 @@ function App() {
           <Route path='/registro' element={<Register />} />
           <Route path='/olvide-contraseña' element={<ForgetPassword />} />
           <Route path='/restablecer-contraseña/:token' element={<ChangePassword />} />
-          <Route path='/main' element={<MainPage />} />
+          <Route path='/home' element={<HomePage />} />
           <Route path='/noticias' element={<NoticiasPage />} />
         </Route>
         <Route path='*' element={<Error404 />} />

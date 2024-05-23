@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RiEyeLine, RiEyeOffLine, RiLockLine, RiMailLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
@@ -22,21 +23,16 @@ const Login = () => {
     //   return;
     // }
 
-    navigate('/main');
+    navigate('/home');
   };
 
   return (
     <div className='bg-white p-6 rounded-lg w-98'>
       <div>
         <div className='text-center'>
-          <img
-            src='/public/favicon.ico'
-            alt='Logo'
-            className='w-48'
-          />
+          <img src='/public/favicon.ico' alt='Logo' className='w-48' />
           <h2>
-            <strong className='text-orange-400'>Goal</strong> {' '}
-            Tracker
+            <strong className='text-orange-400'>GOAL</strong> TRACKER
           </h2>
         </div>
         <h1 className='text-3xl uppercase font-bold text-center mt-4'>Iniciar sesión</h1>
