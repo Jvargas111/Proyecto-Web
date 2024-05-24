@@ -22,7 +22,7 @@ function App() {
           <Route path='/restablecer-contraseña/:token' element={<ChangePassword />} />
           <Route path='/home' element={<HomePage />} />
           <Route path='/noticias' element={<NoticiasPage />} />
-          <Route path='/envivo' element={<EnVivo />} />
+          <Route path='/envivo' element={<EnVivo/>} />
         </Route>
         <Route path='*' element={<Error404 />} />
       </Routes>

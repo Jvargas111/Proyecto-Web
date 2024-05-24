@@ -4,7 +4,7 @@ import './EnVivo.css';
 function EnVivo() {
   useEffect(() => {
     const myHeaders = new Headers();
-    myHeaders.append('x-rapidapi-key', '27645fd0528778b8586e7060adaee0af');
+    myHeaders.append('x-rapidapi-key', '');
     myHeaders.append('x-rapidapi-host', 'v3.football.api-sports.io');
 
     const requestOptions = {
@@ -17,7 +17,6 @@ function EnVivo() {
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
-        // Opcional: Puedes agregar lógica aquí para manejar los datos recibidos
       })
       .catch((error) => console.log('error', error));
 

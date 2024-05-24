@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { RiMailLine, RiLockLine, RiEyeLine, RiEyeOffLine, RiUserLine } from 'react-icons/ri';
 import { toast } from 'react-toastify';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -134,6 +140,22 @@ const Register = () => {
             />
           )}
         </div>
+        <Box sx={{ minWidth: 120 }}>
+          <FormControl fullWidth>
+            <InputLabel id='demo-simple-select-label'>Equipos</InputLabel>
+            <Select
+              labelId='demo-simple-select-label'
+              id='demo-simple-select'
+              // value={age}
+              label='Equipos'
+              // onChange={handleChange}
+            >
+              <MenuItem value={10}>Barcelona</MenuItem>
+              <MenuItem value={20}>Real Madrid</MenuItem>
+              <MenuItem value={30}>Manchester City</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
         <div>
           <button className='mt-4 border-none bg-orange-400 text-white w-full py-2 rounded-lg text-2xl hover:bg-orange-600 transition-colors'>
             Registrarse
