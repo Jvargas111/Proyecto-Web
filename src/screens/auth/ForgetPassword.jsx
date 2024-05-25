@@ -29,7 +29,7 @@ const ForgetPassword = () => {
   };
 
   return (
-    <div className='bg-white p-6 rounded-lg w-98 '>
+    <div className='bg-white p-6 rounded-lg w-98 my-5 '>
       <div>
         <div className='text-center'>
           <img src='/public/favicon.ico' alt='Logo' className='w-48' />

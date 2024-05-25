@@ -57,7 +57,7 @@ const Register = () => {
   };
 
   return (
-    <div className='bg-white p-6 rounded-lg w-98 '>
+    <div className='bg-white p-6 rounded-lg w-98 my-5'>
       <div>
         <div className='text-center'>
           <img src='/public/favicon.ico' alt='Logo' className='w-48' />
@@ -153,6 +153,8 @@ const Register = () => {
               <MenuItem value={10}>Barcelona</MenuItem>
               <MenuItem value={20}>Real Madrid</MenuItem>
               <MenuItem value={30}>Manchester City</MenuItem>
+              <MenuItem value={40}>Liverpool</MenuItem>
+              <MenuItem value={50}>Liverpool</MenuItem>
             </Select>
           </FormControl>
         </Box>
